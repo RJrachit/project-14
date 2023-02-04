@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Login from './components/login';
+import Homepage from './components/homepage';
+import { PASSWORD } from './constant';
+import "./common.scss";
 
 function App() {
+
+  const [password, setPassword] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Rachit & Jasleen
-        </a>
-      </header>
+    <div className="body">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/project-14" element={<Login setPassword={setPassword} />} />
+          <Route path="/project-14/homepage" element={<Homepage password={password}/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
