@@ -1,7 +1,5 @@
 import { TextField, Modal, InputAdornment, Box } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import { PASSWORD } from "../../constant";
 import "./login.scss";
 import { useState } from "react";
 
@@ -20,13 +18,17 @@ const style = {
 
 function Login(props) {
   const [active, setActive] = useState(false);
-  const navigate = useNavigate();
-  const handleChange = (e) => {
-    props.setPassword(e.target.value);
-    if(e.target.value === PASSWORD) {
-      console.log(11111111);
-      navigate("/project-14/homepage");
+  function hashCode(str) {
+    let hash = 0;
+    for (let i = 0, len = str.length; i < len; i++) {
+      let chr = str.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
+      hash |= 0; // Convert to 32bit integer
     }
+    return hash;
+  }
+  const handleChange = (e) => {
+    props.setPassword(hashCode(e.target.value));
   }
   return (
     <div className="login">
@@ -50,6 +52,7 @@ function Login(props) {
                 }}
                 id="password"
                 label="Password"
+                type="password"
                 variant="standard"
                 onChange={handleChange}
               />

@@ -1,4 +1,4 @@
-export const PASSWORD = "Jasleen@51417";
+export const PASSWORD = 2081343930;
 
 export const SONG = `  I wanna love you </br>
 And treat you right </br>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Login from './components/login';
 import Homepage from './components/homepage';
 import { PASSWORD } from './constant';
@@ -8,7 +7,15 @@ import "./common.scss";
 function App() {
 
   const [password, setPassword] = useState("");
+  const [loggedIn, setLogin] = useState(false);
   const [data, setData] = useState();
+
+  useEffect(() => {
+    if(password === PASSWORD) {
+      setLogin(true);
+    }
+  },[password]);
+
   useEffect(() => {
     // fetch("https://raw.githubusercontent.com/RJrachit/project-14-data/main/api.json").
     // then( (res) => {
@@ -20,7 +27,6 @@ function App() {
       res
         .json()
         .then(r => {
-          console.log(r);
           setData(r)})
         // .catch(err => setErrors(err));
     }
@@ -30,12 +36,23 @@ function App() {
 
   return (
     <div className="body">
-      <BrowserRouter>
+      {loggedIn ? (
+        <Homepage data={data} password={password} />
+      ) : (
+        <Login setPassword={setPassword} />
+      )}
+      {/* <BrowserRouter>
         <Routes>
-          <Route path="/project-14" element={<Login setPassword={setPassword} />} />
-          <Route path="/project-14/homepage" element={<Homepage password={password} data={data}/>} />
+          <Route
+            path="/project-14"
+            element={<Login setPassword={setPassword} />}
+          />
+          <Route
+            path="/project-14/homepage"
+            element={<Homepage password={password} data={data} />}
+          />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
