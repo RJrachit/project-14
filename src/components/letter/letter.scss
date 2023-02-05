@@ -1,0 +1,56 @@
+.letter {
+  margin-top: 40px;
+  padding-bottom: 20px;
+
+  .my-letter-cont {
+    background: url("./card.jpg");
+    background-size: cover;
+    margin-top: 40px;
+    .black-layer {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    .my-letter {
+      margin: auto;
+      margin-bottom: 20px;
+      max-width: 550px;
+      color: white;
+      padding: 20px;
+    }
+  }
+  
+
+  .letter-content {
+    margin: 40px 0;
+    text-align: center;
+    .img-contain {
+      width: 300px;
+      height: 550px;
+      img {
+        // position: relative;
+        // width: 100%;
+
+        width: 300px;
+        height: 550px;
+        margin: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        filter: blur(4px);
+        transition: 1s;
+        // &:hover {
+        //   transform: scale(1.1);
+        // }
+      }
+
+      .filter {
+        display: inline-block;
+        width: 300px;
+        height: 550px;
+      }
+      .expanded {
+        transition: 1s;
+        height: 100%;
+        filter: unset
+      }
+    }
+  }
+}

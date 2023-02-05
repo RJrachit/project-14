@@ -1,16 +1,17 @@
 .memories {
-  padding-top: 20px;
+  padding-top: 40px;
 
   .content {
     // margin-top: 10px;
     .card {
       margin: 40px 0;
       font-size: 1.3rem;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
       .description {
         padding: 20px 20px;
         background-color: white;
         display: flex;
-        align-items: center;
+        align-items: center;  
         div {
 
         width: 100%;
@@ -19,7 +20,8 @@
     }
   }
   .image {
-    padding: 10px 20px;
+    padding: 0px 20px;
+    background-color: rgba(255, 255, 255);
     img {
       width: 70%;
       max-height: 500px;

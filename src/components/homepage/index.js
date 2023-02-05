@@ -11,7 +11,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import DehazeIcon from "@mui/icons-material/Dehaze";
-import { grey, deepOrange } from "@mui/material/colors";
+import { grey, deepOrange, blue, yellow, red } from "@mui/material/colors";
 import HomeIcon from "@mui/icons-material/Home";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
@@ -63,10 +63,10 @@ function Homepage(props) {
           >
             <ListItemButton>
               <ListItemIcon>
-                {index === 0 && <HomeIcon />}
-                {index === 1 && <FavoriteIcon />}
-                {index === 2 && <EmojiEmotionsIcon />}
-                {index === 3 && <EmailIcon />}
+                {index === 0 && <HomeIcon sx={{color: grey[900]}}/>}
+                {index === 1 && <FavoriteIcon sx={ {color: red[500]} }/>}
+                {index === 2 && <EmojiEmotionsIcon sx={ {color: yellow[600]} }/>}
+                {index === 3 && <EmailIcon sx={ {color: blue[500]} }/>}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -101,7 +101,7 @@ function Homepage(props) {
                 {["left"].map((anchor) => (
                   <React.Fragment key={anchor}>
                     <Button
-                      sx={{ position: "absolute" }}
+                      sx={{ position: "fixed" }}
                       onClick={toggleDrawer(anchor, true)}
                     >
                       <DehazeIcon sx={{ color: grey[200] }} fontSize="large" />

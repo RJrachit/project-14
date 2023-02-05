@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import "./memories.scss";
-import { PropaneSharp } from "@mui/icons-material";
+import { yellow } from "@mui/material/colors";
 function Memories (props) {
   return (
     <>
@@ -9,7 +9,7 @@ function Memories (props) {
         <Grid container className="grid">
           <Grid item xs={12} md={4}>
             <div className="title">
-              <EmojiEmotionsIcon sx={{ fontSize: 100 }} />
+              <EmojiEmotionsIcon sx={{ fontSize: 100, color: yellow[600] }} />
             </div>
             <div className="title">Memories</div>
           </Grid>
@@ -28,7 +28,7 @@ function Memories (props) {
           </Grid>
         </Grid>
 
-        <div className="content">
+        <div className="content" style={{padding: '20px 0px'}}>
           {props.data && props.data.map((res) => 
             <div className="card">
               <Grid container>
