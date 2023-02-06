@@ -19,8 +19,8 @@ function DearValentine () {
           </Grid>
           <Grid item xs={12} md={8}>
             <div className="content">
-              It's Valentine baby!!! When will be our first valentine together {':('} 
-              As I complete this last component it marks the beggening of 7 Feb 2023. For the next 
+              It's Valentine baby!!! When will be our first valentine together {':( '} 
+              As I complete this last component it marks the beginning of 7 Feb 2023. For the next 
               8 days each of the tabs will open so keep track. Each tab has our story. Read them 
               thoroughly as I might ask questions. JK you have given enough exams already in btech.
             </div>
