@@ -56,9 +56,9 @@ export default function BasicTabs() {
           scrollButtons="auto"
         >
           <Tab label="Rose" {...a11yProps(0)} />
-          <Tab label="Propose" {...a11yProps(1)} disabled/>
-          <Tab label="Chocolate" {...a11yProps(2)} disabled/>
-          <Tab label="Teddy" {...a11yProps(3)} disabled/>
+          <Tab label="Propose" {...a11yProps(1)} />
+          <Tab label="Chocolate" {...a11yProps(2)} />
+          <Tab label="Teddy" {...a11yProps(3)} />
           <Tab label="Promise" {...a11yProps(4)} disabled/>
           <Tab label="Hug" {...a11yProps(5)} disabled/>
           <Tab label="Kiss" {...a11yProps(6)} disabled/>
@@ -102,7 +102,7 @@ export default function BasicTabs() {
       <div className='teddy img'>
           <div className='black-layer'>
             <div className='text'>
-              Thanks for putting teddy in there. You got the asthetics. I gave the best teddy of 
+              Thanks for putting teddy in the background. You got the asthetics. I gave the best teddy of 
               your life. 'MYSELF'.  
             </div>
           </div>
