@@ -59,10 +59,10 @@ export default function BasicTabs() {
           <Tab label="Propose" {...a11yProps(1)} />
           <Tab label="Chocolate" {...a11yProps(2)} />
           <Tab label="Teddy" {...a11yProps(3)} />
-          <Tab label="Promise" {...a11yProps(4)} disabled/>
-          <Tab label="Hug" {...a11yProps(5)} disabled/>
-          <Tab label="Kiss" {...a11yProps(6)} disabled/>
-          <Tab label="Valentine" {...a11yProps(7)} disabled/>
+          <Tab label="Promise" {...a11yProps(4)} />
+          <Tab label="Hug" {...a11yProps(5)} />
+          <Tab label="Kiss" {...a11yProps(6)} />
+          <Tab label="Valentine" {...a11yProps(7)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>

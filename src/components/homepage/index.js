@@ -53,7 +53,7 @@ function Homepage(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Home", "Dear Valentine"].map((text, index) => (
+        {["Home", "Dear Valentine","Memories","Letter"].map((text, index) => (
           <ListItem
             key={text}
             onClick={() => {
@@ -74,19 +74,6 @@ function Homepage(props) {
         ))}
       </List>
       <Divider />
-      <List>
-        {["Memories","Letter"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton disabled>
-              <ListItemIcon>
-                {index === 0 && <EmojiEmotionsIcon sx={ {color: yellow[600]} }/>}
-                {index === 1 && <EmailIcon sx={ {color: blue[500]} }/>}
-              </ ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
     </Box>
   );
   return (
