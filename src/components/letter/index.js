@@ -37,6 +37,9 @@ function Letter () {
               been sending our sweet bitter messages. Here are the chosen and
               available few. I will write lots of them from now I promise. The
               sweet messages for the sweetest ones.
+              <br/>
+              <br />
+              <strong>I'm Sorry. You were the best. I should have not treated you the way I did. I couldn't fight the demons inside my head. It costed us 'Us'. Forgive me please.</strong>
             </div>
           </Grid>
         </Grid>

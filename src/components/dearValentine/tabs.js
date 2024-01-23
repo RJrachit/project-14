@@ -63,6 +63,7 @@ export default function BasicTabs() {
           <Tab label="Hug" {...a11yProps(5)} />
           <Tab label="Kiss" {...a11yProps(6)} />
           <Tab label="Valentine" {...a11yProps(7)} />
+          <Tab label="Hope" {...a11yProps(8)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -143,6 +144,15 @@ export default function BasicTabs() {
           <div className='black-layer'>
             <div className='text'>
               You - The Perfect Valentine.
+            </div>
+          </div>
+        </div>
+      </TabPanel>
+      <TabPanel value={value} index={8}>
+      <div className='hope img'>
+          <div className='black-layer'>
+            <div className='text'>
+              We are the best & the worst. We love & hate. We push & pull. We want separation & hope that things turned out to different. Let's hope we have a beautiful life.
             </div>
           </div>
         </div>
