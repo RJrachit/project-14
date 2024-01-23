@@ -27,6 +27,8 @@ function App() {
       res
         .json()
         .then(r => {
+          
+      console.log(r);
           setData(r)})
         // .catch(err => setErrors(err));
     }
